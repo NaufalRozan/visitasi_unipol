@@ -58,7 +58,13 @@ Aplikasi berbasis web untuk manajemen proses visitasi dan akreditasi di Universi
     php artisan key:generate
     ```
 
-4. **Konfigurasi database di .env**
+4. **Buat symlink storage**
+
+    ```bash
+    php artisan storage:link
+    ```
+
+5. **Konfigurasi database di .env**
 
     ```bash
     DB_CONNECTION=mysql
@@ -69,20 +75,20 @@ Aplikasi berbasis web untuk manajemen proses visitasi dan akreditasi di Universi
     DB_PASSWORD=
     ```
 
-5. **Install dependensi frontend**
+6. **Install dependensi frontend**
 
     ```bash
     npm install
     npm run dev
     ```
 
-6. **Migrasi dan seed database**
+7. **Migrasi dan seed database**
 
     ```bash
     php artisan migrate --seed
     ```
 
-7. **Jalankan aplikasi**
+8. **Jalankan aplikasi**
 
     ```bash
     php artisan serve
