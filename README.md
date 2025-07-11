@@ -1,6 +1,6 @@
 <p align="center">
     <a href="#">
-        <img src="https://unipol.ac.id/wp-content/uploads/2025/06/Logo-Brand-UNIPOL-scaled.png" width="500" alt="Unipol Logo">
+        <img src="https://unipol.ac.id/wp-content/uploads/2025/06/ChatGPT-Image-May-31-2025-09_19_02-AM.png" width="200" alt="Unipol Logo">
     </a>
 </p>
 
