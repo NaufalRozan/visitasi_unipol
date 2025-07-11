@@ -82,13 +82,7 @@ Aplikasi berbasis web untuk manajemen proses visitasi dan akreditasi di Universi
     npm run dev
     ```
 
-7. **Migrasi dan seed database**
-
-    ```bash
-    php artisan migrate --seed
-    ```
-
-8. **Jalankan aplikasi**
+7. **Jalankan aplikasi**
 
     ```bash
     php artisan serve
