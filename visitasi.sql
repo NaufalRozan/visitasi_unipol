@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Oct 10, 2024 at 12:58 AM
+-- Generation Time: Jul 26, 2025 at 05:15 AM
 -- Server version: 8.0.35
 -- PHP Version: 8.3.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `visitasi_unes`
+-- Database: `visitasi_demo`
 --
 
 -- --------------------------------------------------------
@@ -39,19 +39,8 @@ CREATE TABLE `akreditasi` (
 --
 
 INSERT INTO `akreditasi` (`id`, `sub_unit_id`, `nama_akreditasi`, `status`) VALUES
-(2, 4, 'A', 'tidak aktif'),
-(5, 1, 'Akreditasi 1', 'tidak aktif'),
-(6, 1, 'Akreditasi 2', 'tidak aktif'),
-(7, 1, 'Akreditasi 3 Edited', 'tidak aktif'),
-(9, 1, 'LAM2025', 'aktif'),
-(10, 2, 'Akreditasi TM', 'aktif'),
-(25, 1, 'Akreditasi 5', 'tidak aktif'),
-(33, 1, 'Akreditasi 6', 'tidak aktif'),
-(34, 1, 'Akreditasi 7', 'tidak aktif'),
-(35, 1, 'Akreditasi 8', 'tidak aktif'),
-(36, 1, 'Akreditasi 9', 'tidak aktif'),
-(37, 1, 'Akreditasi 10', 'tidak aktif'),
-(38, 1, 'Akreditasi 11', 'tidak aktif');
+(40, 1, 'LAM INFOKOM 2.0', 'aktif'),
+(41, 1, 'LAM2024', 'tidak aktif');
 
 -- --------------------------------------------------------
 
@@ -95,17 +84,16 @@ CREATE TABLE `detail` (
 --
 
 INSERT INTO `detail` (`id`, `substandar_id`, `no_urut`, `nama_detail`) VALUES
-(20, 12, 1, 'Detail 1.1'),
-(21, 12, 2, 'Detail 1.2'),
-(22, 15, 1, 'Detail 1'),
-(24, 18, 1, 'SK Rektor'),
-(25, 18, 2, 'SK Senat'),
-(30, 18, 3, 'Detail 3'),
-(31, 18, 4, 'Detail 4'),
-(32, 18, 5, 'Detail 5'),
-(33, 18, 6, 'Detail 6'),
-(34, 18, 7, 'Detail 7'),
-(35, 18, 8, 'Detail 8');
+(39, 53, 1, 'SK Rektor'),
+(40, 53, 2, 'Sk Senat'),
+(41, 53, 3, 'Hasil Musyawarah Pemangku Kepentingan'),
+(42, 53, 4, 'Dokumen Kajian Awal'),
+(43, 53, 5, 'Matriks Keselarasan VMTS'),
+(44, 54, 1, 'Implementasi VMTS dalam Kurikulum'),
+(45, 54, 2, 'Integrasi Misi dalam Penelitian'),
+(46, 55, 1, 'Laporan Evaluasi Pencapaian'),
+(47, 56, 1, 'Dokumen Hasil Analisis Risiko'),
+(48, 57, 1, 'Revisi dan Pembaruan VMTS');
 
 -- --------------------------------------------------------
 
@@ -128,15 +116,12 @@ CREATE TABLE `detail_item` (
 --
 
 INSERT INTO `detail_item` (`id`, `detail_id`, `no_urut`, `deskripsi`, `lokasi`, `tipe`, `file_path`) VALUES
-(35, 20, 1, 'Dokumen 1', 'storage/documents/HNJ2gnPRBTFgl0PXmuLgAW83uarzPBpMD6UreyOD.pdf', 'Document', NULL),
-(36, 21, 1, 'Dokumen 1.1.2', 'storage/documents/5q4MVWtRAf2SzuE1AzFsn0YJ2lRoy0wOC64Yyr80.pdf', 'Document', NULL),
-(37, 20, 2, 'Dokumen 2', 'storage/documents/9mDyqlPHOURONeToeq1oPr04PygA6XQCRLLooQnP.png', 'Image', NULL),
-(38, 20, 3, 'Dokumen 3', 'storage/documents/50mpRvC9FT15jGFscGKPOhWTGFAHKy7i5ZhddKwH.png', 'Video', NULL),
-(39, 20, 4, 'Dokumen 4', 'storage/documents/KTSy122IAZCY5IrWidplCDHXGNlby0bAHZgWCCqB.pdf', 'Document', NULL),
-(40, 24, 1, 'SK Rektor Penetapan Renstra', 'storage/documents/9LJ9SFsAZ2wcMNcAqJNtothKjCkUv9nyrmJVxKGH.pdf', 'Document', NULL),
-(42, 24, 2, 'Dokumen 1', 'storage/documents/fk0gQRQaz7BFOk928v21J0sCVnnzACkCwimwKNd4.pdf', 'Document', NULL),
-(44, 24, 3, 'tes', 'storage/documents/8ZbwiOG92x15aJwO2Diai7pzRbdR1SUW8d7ZCtwY.pdf', 'Image', NULL),
-(48, 24, 4, 'Documen 2', 'storage/documents/l6Q0N5fHDGO39sPdy0FUKCLKeIKcBmgmCMNSW0QJ.pdf', 'Document', NULL);
+(52, 39, 1, 'Surat Keputusan Rektor tentang pengesahan VMTS', 'storage/documents/Uxf0Tp7hrEpSbaRtjfZsVuDnIeZadf7H0NmKrFwj.pdf', 'Document', NULL),
+(53, 40, 1, 'Surat Keputusan Senat sebagai bukti persetujuan VMTS', 'storage/documents/PXTVxZrre0XKDmjEUIKEguZ9cq5jHopAjLSfEyUH.pdf', 'Document', NULL),
+(54, 41, 1, 'Dokumen hasil diskusi dengan pemangku kepentingan internal dan eksternal', 'storage/documents/0arDPVHWNalaqr7YqidU5BvlOxKZRuHUcupsqum1.png', 'Image', NULL),
+(55, 42, 1, 'Video Kajian Awal', 'storage/documents/O7fKOD7fQfkP8zHjcEpIkulnL4SlRZL92PE99CMI.mp4', 'Video', NULL),
+(56, 43, 1, 'Dokumen Matriks Keslarasan VMTS', 'storage/documents/Wc1CmkDivQqE0y0iK5zMERG11ELL3jx3qqhOMvqW.pdf', 'Document', NULL),
+(61, 39, 2, 'Penetapan SK Rektor', 'storage/documents/rLmlvmyurP2Sb7e4ScwxJI1liKpy8kKiPsFJv7oJ.pdf', 'Document', NULL);
 
 -- --------------------------------------------------------
 
@@ -190,8 +175,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('xGtwTdTWOKrUdNn2ZPnEVXFGevXs0wzcK4ytqidi', 14, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoidnZMZ2oyNFlKZWtPaHdYMDNTNU9KeVlNMzdsNnFxV3lRQmUzWXViTiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI4OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvcmVzdW1lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTQ7czoxMToic3ViX3VuaXRfaWQiO3M6MToiMSI7fQ==', 1727342234),
-('YIkuPKQSNeOcEMr75A0lVKcnNaBr9KaNiTw8ngrC', 13, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoidHpGRFNCeHJrT3VZdnQ4R0VSUnJhUEtZY2VKSHRvUkxZa3Rndk13RiI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czoyODoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2JlcmthcyI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM4OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYmVya2FzL2RldGFpbC8xOCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjEzO3M6MTE6InN1Yl91bml0X2lkIjtzOjE6IjEiO30=', 1727342277);
+('8eEQ62MPVNjI8ZqhqzzUhusLKQaO14xTbGzTCnif', 13, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiOUN2TkNVSmdTWUg2OVRRaGlDaThpUktKeUxtOURySkpCNWU0djRCSyI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo0MzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL3NlYXJjaC1maWxlP3E9ZG9rdW1lbiI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMxOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTM7czoxMToic3ViX3VuaXRfaWQiO3M6MToiMSI7fQ==', 1752221554);
 
 -- --------------------------------------------------------
 
@@ -211,26 +195,11 @@ CREATE TABLE `standar` (
 --
 
 INSERT INTO `standar` (`id`, `akreditasi_id`, `no_urut`, `nama_standar`) VALUES
-(11, 6, 1, 'Bagian 1.1'),
-(12, 6, 2, 'Bagian 1.2'),
-(13, 6, 3, 'Bagian 1.3'),
-(17, 5, 2, 'Bagian 2'),
-(18, 5, 3, 'Bagian 3'),
-(19, 5, 1, 'Bagian 1'),
-(20, 6, 4, 'Bagian 1.4'),
-(22, 9, 1, 'VMTS'),
-(27, 10, 1, 'Bagian 1 TM'),
-(30, 10, 2, 'Bagian 2 TM'),
-(31, 10, 3, 'Bagian 3 TM'),
-(32, 10, 4, 'Bagian 4 TM'),
-(37, 9, 2, 'Bagian 2 TI'),
-(38, 9, 3, 'Bagian 3 TI Edited'),
-(49, 9, 4, 'Bagian 4'),
-(50, 9, 5, 'Bagian 5'),
-(51, 9, 6, 'Bagian 6'),
-(52, 9, 7, 'Bagian 7'),
-(53, 9, 8, 'Bagian 8'),
-(54, 9, 9, 'Bagian 9');
+(59, 40, 1, 'VMTS'),
+(60, 40, 2, 'Sumber Daya Manusia'),
+(61, 40, 3, 'Pendidikan'),
+(62, 40, 4, 'Penelitian'),
+(63, 40, 5, 'Pengabdian');
 
 -- --------------------------------------------------------
 
@@ -250,20 +219,11 @@ CREATE TABLE `substandar` (
 --
 
 INSERT INTO `substandar` (`id`, `standar_id`, `no_urut`, `nama_substandar`) VALUES
-(12, 11, 1, 'Sub Bagian 1.1'),
-(13, 11, 2, 'Sub Bagian 1.2'),
-(14, 11, 3, 'Sub Bagian 1.3'),
-(15, 19, 2, 'tes'),
-(16, 19, 1, 'tes12'),
-(17, 11, 4, 'Sub Bagian 1.4'),
-(18, 22, 1, 'Penetapan'),
-(28, 27, 1, 'Tes 1'),
-(40, 27, 2, 'tes'),
-(44, 22, 2, 'Sub Bagian 1'),
-(45, 22, 3, 'Sub Bagian 3'),
-(46, 22, 4, 'Sub Bagian 4'),
-(47, 22, 5, 'Sub Bagian 5'),
-(48, 22, 6, 'Sub Bagian 6');
+(53, 59, 1, 'Penetapan'),
+(54, 59, 2, 'Pelaksanaan'),
+(55, 59, 3, 'Evaluasi'),
+(56, 59, 4, 'Pengendalian'),
+(57, 59, 5, 'Peningkatan');
 
 -- --------------------------------------------------------
 
@@ -285,12 +245,8 @@ CREATE TABLE `sub_units` (
 INSERT INTO `sub_units` (`id`, `unit_id`, `nama_sub_unit`, `is_prodi`) VALUES
 (1, 1, 'Teknologi Informasi', 0),
 (2, 1, 'Teknik Mesin', 0),
-(3, 2, 'Ekonomi', 0),
-(4, 2, 'Akuntansi', 0),
-(5, 2, 'Manajemen', 0),
-(6, 1, 'Teknik Sipil', 0),
-(7, 2, 'Ekonomi Syariah', 0),
-(8, 3, 'Universitas', 0);
+(3, 1, 'Teknik Sipil', 0),
+(9, 4, 'Akuntansi', 0);
 
 -- --------------------------------------------------------
 
@@ -310,8 +266,7 @@ CREATE TABLE `units` (
 
 INSERT INTO `units` (`id`, `nama_unit`, `is_fakultas`) VALUES
 (1, 'Teknik', 0),
-(2, 'Ekonomi dan Bisnis', 0),
-(3, 'Universitas', 0);
+(4, 'Ekonomi dan Bisnis', 0);
 
 -- --------------------------------------------------------
 
@@ -332,13 +287,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`) VALUES
-(10, 'Admin Fakultas Teknik', 'admin_teknik@gmail.com', '$2y$12$8TBQNVMr2dlllbffZH1SjurcN0pjkDKrZyXvWVlRdtf1MnD9mTOFm', 'Fakultas'),
-(11, 'Admin Prodi Ekonomi Syariah', 'admin_eksya@gmail.com', '$2y$12$mA53rFBqFS2614uctp5QbeNJ8D/FwPRKgExV4rI8MluqZQsLOZlUa', 'Prodi'),
-(12, 'Admin Fakultas Ekonomi dan Bisnis', 'admin_feb@gmail.com', '$2y$12$yl2d5SsYK7Cjy6IEHuuzM.mhij9LcVwuuL5nueC38iRf77I0n/kfm', 'Fakultas'),
 (13, 'Admin Universitas', 'admin_univ@umy.ac.id', '$2y$12$RWc4QBO/n6l.QWIdjctLre8GN0vwtv3JcAV2pQVce7Fme3NEh/5/C', 'Universitas'),
-(14, 'Admin Teknologi Informasi', 'admin_ti@umy.ac.id', '$2y$12$gHKeiJhW7xOe8D6sbau1w.WS8Y8YBp7FOD5.P/ZgJukXZ.sVMOH9O', 'Prodi'),
-(15, 'Admin Ekonomi', 'admin_ekonomi@umy.ac.id', '$2y$12$dTyaSEe5bwfIL0wgAxOoUOUUW08cpc8Jxu.UPMv.kOvVDnl/rGrbW', 'Prodi'),
-(16, 'Admin Teknik 2', 'admin_teknik@umy.ac.id', '$2y$12$JiK7AFLpCWHJmgVzoGi.keiLroADErLxwCcC6zda7fxyw6UA0mCK6', 'Fakultas');
+(17, 'Akun Demo - Fakultas', 'demo@demo.com', '$2y$12$DBHHW9po/irmNVGkJcpzSO3tInxFgC8s5W4T9CNLf.yw0Gw2lAI9m', 'Fakultas');
 
 -- --------------------------------------------------------
 
@@ -357,27 +307,13 @@ CREATE TABLE `users_sub_unit` (
 --
 
 INSERT INTO `users_sub_unit` (`id`, `user_id`, `sub_unit_id`) VALUES
-(20, 10, 1),
-(21, 10, 2),
-(22, 10, 6),
-(23, 11, 7),
-(24, 12, 3),
-(25, 12, 4),
-(26, 12, 5),
-(27, 12, 7),
-(28, 13, 1),
-(29, 13, 2),
-(31, 13, 3),
-(32, 13, 4),
-(33, 13, 5),
-(30, 13, 6),
-(34, 13, 7),
-(36, 13, 8),
-(35, 14, 1),
-(37, 15, 3),
-(38, 16, 1),
-(39, 16, 2),
-(40, 16, 6);
+(84, 13, 1),
+(2, 13, 2),
+(3, 13, 3),
+(86, 13, 9),
+(80, 17, 1),
+(82, 17, 2),
+(83, 17, 3);
 
 --
 -- Indexes for dumped tables
@@ -485,19 +421,19 @@ ALTER TABLE `users_sub_unit`
 -- AUTO_INCREMENT for table `akreditasi`
 --
 ALTER TABLE `akreditasi`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `detail`
 --
 ALTER TABLE `detail`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `detail_item`
 --
 ALTER TABLE `detail_item`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -509,37 +445,37 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `standar`
 --
 ALTER TABLE `standar`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `substandar`
 --
 ALTER TABLE `substandar`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `sub_units`
 --
 ALTER TABLE `sub_units`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `units`
 --
 ALTER TABLE `units`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users_sub_unit`
 --
 ALTER TABLE `users_sub_unit`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- Constraints for dumped tables
